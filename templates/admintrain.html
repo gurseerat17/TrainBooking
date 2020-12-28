@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+    <div>
+        <h1 align="center">Add Train</h1>
+        <form action="{{ url_for('admintrains')}}" method="post">
+            {{form.hidden_tag()}}
+            <fieldset class='form-group'>
+               
+                <div class='form-group'>
+                    {{form.train_no.label(class="form-control-label")}}
+                    {{form.train_no(class="form-control")}}
+                   
+
+                </div>
+                <div class='form-group'>
+                    {{form.date.label(class="form-control-label")}}
+                    {{form.date(class="form-control")}}
+                   
+
+                </div>
+                <div class='form-group'>
+                    {{form.ac_coaches.label(class="form-control-label")}}
+                    {{form.ac_coaches(class="form-control")}}
+                   
+
+                </div>
+                <div class='form-group'>
+                    {{form.slp_coaches.label(class="form-control-label")}}
+                    {{form.slp_coaches(class="form-control")}}
+                   
+
+                </div>
+                <div class='form-group'>
+                    {{form.security_key.label(class="form-control-label")}}
+                    {{form.security_key(class="form-control")}}
+                   
+
+                </div>
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-outline-info") }}
+                </div>
+                
+
+                
+            </fieldset>
+
+
+        </form>
+
+    </div>
+    <small class="text-muted">
+        <a class="ml-2" href="{{ url_for('home') }}">Home Page</a>
+    </small>
+
+{% endblock content %}

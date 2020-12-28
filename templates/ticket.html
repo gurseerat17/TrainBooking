@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 align="center"> Ticket</h1>
+	<h1 align="center">PNR NUMBER : {{data[0][0]}}</h1>
+    
+	
+	
+	<div class='form-group'>
+                    
+                    
+                       
+						
+                    
+					{% for item in data%}
+					    <h3>Passenger Ticket :</h3>
+                        <p> Name : {{item[1]}}
+						<p> Age : {{item[2]}}
+						<p> Gender : {{item[3]}}
+						<p> Coach Number : {{item[4]}}
+						<p> Berth Number : {{item[5]}}
+						<p> Coach Type :  {{item[7]}}
+						<p> Berth Type : {{item[6]}}<br>
+						<hr>
+                    {%endfor%}
+
+	</div>
+	<small class="text-muted">
+		Make Another Booking-<a class="ml-2" href="{{ url_for('booktrains') }}">Book Tickets</a>
+	</small>
+
+{% endblock content %}

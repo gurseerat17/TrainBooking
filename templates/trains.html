@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 align="center"> These are the Available Trains</h1>
+    
+	
+	<br>
+	<div class='form-group'>
+                    
+                    
+                       
+						
+                    <h3 align="center">&nbsp Train ID 	&nbsp &nbsp &nbsp	Train Date</h3>
+					{% for item in data%}
+					    
+                        <p align="center"> {{item[0]}} &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp {{item[1]}}
+                    {%endfor%}
+						<hr>
+
+    </div>
+    <small class="text-muted">
+        <a class="ml-2" href="{{ url_for('login') }}">Sign In</a><br>
+        <a class="ml-2" href="{{ url_for('home') }}">Home Page</a><br>
+        <a class="ml-2" href="{{ url_for('admintrains') }}">Add Train</a><br>
+    </small>
+
+{% endblock content %}

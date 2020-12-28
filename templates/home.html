@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 align="center"> Welcome to Railway Registration Portal </h1>
+	<p align="center"><a href="{{ url_for('register') }}" class="button" >Register </a>
+	<p align="center"><a href="{{ url_for('login') }}" class="button" >Login </a>
+	<p align="center"><a href="{{ url_for('admintrains') }}" class="button" >Add Train </a>
+	<p align="center"><a href="{{ url_for('available_trains') }}" class="button" >Available Trains </a>
+	
+
+    {% endblock content %}
